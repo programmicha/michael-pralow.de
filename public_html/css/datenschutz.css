@@ -1,0 +1,70 @@
+header, nav, footer { 
+    display: block; 
+}
+footer, header, li, nav, p, ul, blockquote { 
+    margin: 0;
+    padding: 0; 
+}
+html { 
+    border-top: .375rem solid #333; 
+}
+body {
+    font-family: "Georgia", serif;
+    font-size: 1em;
+    line-height: 1.5;
+    margin: auto;
+    padding: 0 1rem 1rem 1.5rem;
+    text-align: center;
+}
+a:hover {
+    background-color: #E0EAF1; 
+    text-decoration: none; 
+}
+a:active { 
+    position: relative; 
+    top: 1px; 
+    left: 1px; 
+}
+a img {
+    border: none;
+}
+small {
+    font-size: .8rem;
+    line-height: 1.875;
+}
+h1 {
+    margin: .5rem auto 0 auto;
+    padding: 0; 
+    font-size: 2rem;
+    line-height: 1.5;
+    font-weight: normal;
+}
+h2 {
+    font-size: 1.6rem;
+    line-height: 3;
+    font-weight: normal;
+}
+body > p {
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+    text-align: left;
+}
+body > blockquote {
+    border-left: .5em solid silver;
+    font-size: 1.1rem;
+    font-style: italic;
+    margin: 1.5rem 1em;
+    padding-left: 1em;
+    text-align: left;
+}
+footer[role="contentinfo"]>p:nth-child(1) {
+    margin-top: 1.5rem;
+}
+footer[role="contentinfo"]>p:nth-child(2) a:hover {
+    background-color: transparent;
+}
+@media screen {
+    body {
+        max-width: 320px;
+    }
+}

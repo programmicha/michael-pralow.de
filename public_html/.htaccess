@@ -1,0 +1,43 @@
+# add used content types
+<IfModule mod_mime.c>
+    AddType image/jpeg .jpg .jpeg
+    AddType image/png .png
+    AddType image/svg+xml .svg .svgz
+    AddType image/x-icon .ico
+    AddType text/css .css
+    AddType 'text/html; charset=UTF-8' .html
+</IfModule>
+
+# add expires header
+# site is pretty static, 1 month should be fine
+# Set caching on favico.ico files for 11 months
+# for more image formats:
+# <filesMatch "\.(ico|gif|jpg|png)$">
+<IfModule mod_expires.c>
+    ExpiresActive on
+    ExpiresByType text/html "access plus 10 years"
+    <filesMatch "\.(css|ico|jpg|png|svg)$">
+        ExpiresDefault "access plus 10 years"
+    </filesMatch>
+</IfModule>
+
+# Cache-Control "public" only needed for authentication usecases
+#<FilesMatch "\.(html|svg)$">
+#    <IfModule mod_headers.c>
+#        Header set Cache-Control "public"
+#    </IfModule>
+#    FileETag MTime Size
+#</FilesMatch>
+
+# gzip
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css image/svg+xml
+</IfModule>
+
+# remove .html extension
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}\.html -f
+    RewriteRule ^(.*)$ $1.html
+</IfModule>

@@ -1,0 +1,66 @@
+header, nav, footer { 
+    display: block; 
+}
+footer, header, li, nav, p, ul { 
+    margin: 0 auto;
+    padding: 0; 
+}
+html { 
+    border-top: .375rem solid #333; 
+}
+body {
+    font-family: "Georgia", serif;
+    font-size: 1em;
+    line-height: 1.5;
+    margin: auto;
+    padding: 0 1rem 1rem 1.5rem;
+    text-align: center;
+}
+a:hover {
+    background-color: #E0EAF1; 
+    text-decoration: none; 
+}
+a:active { 
+    position: relative; 
+    top: 1px; 
+    left: 1px; 
+}
+a[href^="tel:"]:before {
+    content: "\260E";
+    margin-right: 0.5em;
+}
+a img {
+    border: none;
+}
+small {
+    font-size: .8rem;
+    line-height: 1.875;
+}
+h1 {
+    margin: .5rem auto 0 auto;
+    padding: 0; 
+    font-size: 2rem;
+    line-height: 1.5;
+    font-weight: normal;
+}
+body > p, 
+body > address {
+    font-size: 1.1rem;
+    font-style: normal;
+    margin-top: 1.5rem;
+    text-align: left;
+}
+body > address p:nth-child(4) {
+    margin-top: 1.5rem;
+}
+footer[role="contentinfo"]>p:nth-child(1) {
+    margin-top: 1.5rem;
+}
+footer[role="contentinfo"]>p:nth-child(2) a:hover {
+    background-color: transparent;
+}
+@media screen {
+    body {
+        max-width: 320px;
+    }
+}

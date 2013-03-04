@@ -1,0 +1,96 @@
+header, nav, footer { 
+    display: block; 
+}
+footer, header, li, nav, p, ul { 
+    margin: 0 auto;
+    padding: 0; 
+}
+html { 
+    border-top: .375rem solid #333; 
+}
+body {
+    background-color:
+    font-family: "Georgia", serif;
+    font-size: 1em;
+    line-height: 1.5;
+    margin: auto;
+    padding: 0 1rem 1rem 1.5rem;
+    text-align: center;
+}
+a:hover {
+    background-color: #E0EAF1; 
+    text-decoration: none; 
+}
+a:active { 
+    position: relative; 
+    top: 1px; 
+    left: 1px; 
+}
+a img {
+    border: none;
+}
+a[href^="tel:"]:before {
+    content: "\260E";
+    margin-right: 0.3rem;
+}
+small {
+    font-size: .8rem;
+    line-height: 1.875;
+}
+header[role="banner"] {
+    border-left: 2px solid #fff;
+    border-right: 2px solid #fff;
+    border-top: 5px solid #fff;
+    -webkit-box-shadow: 3px 3px 3px #777;
+    -moz-box-shadow: 3px 3px 3px #777;
+    box-shadow: 3px 3px 3px #777;
+    -webkit-transform: rotate(-2deg);
+    -webkit-backface-visibility: hidden;
+    -moz-transform: rotate(-2deg);
+    margin-top: 1.5rem;
+    padding-bottom: .5rem;
+    width: 220px;
+}
+header[role="banner"] img {
+    border-radius: 5px;
+    display: block;
+    margin: auto;
+}
+h1 {
+    margin: .5rem auto 0 auto;
+    padding: 0; 
+    font-size: 1.5rem;
+    line-height: 1.2;
+    font-weight: normal;
+    color: #000;
+}
+body > span {
+    margin-top: 1.5rem;
+}
+body > a,
+body > span {
+    display: block;
+    font-size: 1.2rem;
+}
+body > span > a {
+    display: block;
+}
+body > p {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-top: 1.5rem;
+}
+footer[role="contentinfo"]>p:nth-child(1) {
+    margin-top: 3rem;
+}
+footer[role="contentinfo"]>p:nth-child(1) a:hover {
+    background-color: transparent;
+}
+footer[role="contentinfo"]>p:nth-child(2) {
+    margin-top: .375rem;
+}
+@media screen {
+    body {
+        max-width: 320px;
+    }
+}
